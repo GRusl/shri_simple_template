@@ -17,3 +17,13 @@ https://eslint.org
 
 Линтинг CSS кода при помощи `Stylelint`:
 https://stylelint.io/
+
+#### analyze
+
+Подготавливает html отчет о сборке через `statoscope`:
+http://statoscope.tech
+
+
+#### validate
+
+Проверяет сборку через `statoscope` при помощи конфига `statoscope.config.js`.
