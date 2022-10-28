@@ -1,0 +1,14 @@
+name: Clone_test
+
+on: [push]
+
+jobs: 
+  runs-on: ubuntu-latest
+    steps:
+        testing-git:
+          - name: testing_clone_git
+          run: actions/checkout@v1
+          
+          -name: wiew
+          run: ls -la
+ 
