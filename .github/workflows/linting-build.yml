@@ -1,0 +1,23 @@
+name: linting-build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - '**'
+      - '!master'
+
+jobs:
+  linting:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: install npm
+        run: npm install --force
+      - name: linting js
+        run: npm run lint:js
+      - name: linting css
+        run: npm run lint:css
+      - name: building
+        run: npm run build
