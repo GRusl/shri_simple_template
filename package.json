@@ -21,13 +21,11 @@
     "stream-browserify": "^3.0.0"
   },
   "scripts": {
-    "stats": "webpack --json stats.json && npx statoscope serve ./stats.json & sleep 5 && open http://localhost:8080",
     "start": "webpack serve",
     "build": "webpack",
-    "test": "echo \"implement me\"",
     "lint:js": "eslint . --ext .tsx,.ts,.js,.jsx --fix",
     "lint:css": "stylelint \"**/*.css\"",
-    "analyze": "webpack --json stats.json && npx statoscope serve ./stats.json & sleep 5 && open http://localhost:8080",
+    "analyze": "webpack --json stats.json && npx statoscope serve ./stats.json",
     "validate": "node_modules/.bin/statoscope validate -i stats.json --config=./statoscope.config.js",
     "deploy": "gh-pages -d dist"
   },
