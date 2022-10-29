@@ -5,7 +5,10 @@ module.exports = {
         "es2021": true
     },
     "ignorePatterns": ["dist/"],
-    "extends": "plugin:react/recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
