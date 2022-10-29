@@ -11,13 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: GetDir
-      run: echo ls
+    - name: CheckoutRepository
+      uses: actions/checkout@master
 
     - name: Install
-      run: |
-        npm install
-        npm start
+      run: npm install
 
     - name: Build
       run: npm run build
