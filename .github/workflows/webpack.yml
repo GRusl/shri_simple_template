@@ -23,7 +23,8 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Lint
-      run: |
-        npm run lint:js
-        npm run lint:css
+    - name: LintJS
+      run: npm run lint:js
+
+    - name: LintCSS
+      run: npm run lint:css
