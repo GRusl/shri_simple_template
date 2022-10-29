@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: GetDir
+      run: ls
+
     - name: Install
       run: |
-        dir
         npm install
         npm start
 
