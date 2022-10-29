@@ -13,6 +13,7 @@ jobs:
     steps:
     - name: Install
       run: |
+        dir
         npm install
         npm start
 
