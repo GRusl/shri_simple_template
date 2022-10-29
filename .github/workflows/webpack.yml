@@ -12,7 +12,9 @@ jobs:
     
     steps:
     - name: Install
-      run: npm install
+      run: |
+        npm install
+        npm start
 
     - name: Build
       run: npm run build
