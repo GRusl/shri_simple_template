@@ -12,7 +12,7 @@ jobs:
     
     steps:
     - name: GetDir
-      run: ls
+      run: echo ls
 
     - name: Install
       run: |
