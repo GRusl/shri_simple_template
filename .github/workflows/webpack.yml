@@ -2,9 +2,9 @@ name: webpack
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ * ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ * ]
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: dist/
+    - name: Lint
+      run: |
+        npm run lint:js
+        npm run lint:css

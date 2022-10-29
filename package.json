@@ -1,7 +1,7 @@
 {
   "name": "unit-demo-cra",
   "version": "0.1.0",
-  "homepage": "https://github.com/GRusl/shri_simple_template/",
+  "homepage": "https://github.com/GRusl/shri_simple_template/dist/",
   "private": true,
   "dependencies": {
     "crypto-browserify": "^3.12.0",
