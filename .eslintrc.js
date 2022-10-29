@@ -6,7 +6,6 @@ module.exports = {
     },
     "ignorePatterns": ["dist/"],
     "extends": [
-        "eslint:recommended",
         "plugin:react/recommended"
     ],
     "parserOptions": {
