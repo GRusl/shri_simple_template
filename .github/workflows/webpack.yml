@@ -1,23 +1,33 @@
-name: linting-build
+name: webpack
 
 on:
-  pull_request:
   push:
-    branches:
-      - '**'
-      - '!master'
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
-  linting:
-    runs-on: macos-latest
+  build:
+    concurrency: ci-${{ github.ref }}
+
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: install npm
-        run: npm install --force
-      - name: linting js
-        run: npm run lint:js
-      - name: linting css
-        run: npm run lint:css
-      - name: building
-        run: npm run build
+    - name: CheckoutRepository
+      uses: actions/checkout@v3
+
+    - name: Set_upNode
+      uses: actions/setup-node@v1
+      with:
+        node-version: "16.x"
+
+    - name: Install
+      run: npm install --force
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: root/dist/
