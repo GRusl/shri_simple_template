@@ -4,6 +4,7 @@ module.exports = {
         "commonjs": true,
         "es2021": true
     },
+    "ignorePatterns": ["dist/"],
     "extends": "plugin:react/recommended",
     "parserOptions": {
         "ecmaFeatures": {
