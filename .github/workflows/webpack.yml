@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-permissions:
-  contents: write
-
 jobs:
   build:
     concurrency: ci-${{ github.ref }}
@@ -30,7 +27,7 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Deploy 🚀
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: dist
