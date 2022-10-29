@@ -23,7 +23,4 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Lint
-      run: |
-        npm run lint:js
-        npm run lint:css
+    - uses: docker://github/super-linter:v2.1.0
