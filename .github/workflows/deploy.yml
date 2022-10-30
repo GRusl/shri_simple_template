@@ -1,10 +1,6 @@
 name: Deploy
 
-on:
-  pull_request:
-    types:
-      - closed
-      - merged
+on: push
 
 permissions:
   contents: write
