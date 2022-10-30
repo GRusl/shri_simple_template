@@ -22,7 +22,7 @@
     "stream-browserify": "^3.0.0"
   },
   "scripts": {
-    "start": "npx webpack serve",
+    "start": "npx webpack serve --mode development",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "lint:js": "eslint . --ext .tsx,.ts,.js,.jsx --fix",
