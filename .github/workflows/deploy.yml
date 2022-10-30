@@ -1,9 +1,10 @@
-name: BuildAndDeploy
+name: Deploy
 
 on:
   pull_request:
     types:
       - closed
+      - merged
     branches:
       - master
 
