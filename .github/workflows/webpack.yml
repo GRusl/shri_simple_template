@@ -25,7 +25,7 @@ jobs:
 
     - name: Push
       run: |
-        git commit /dist -m "I am Build IT!!!"
+        git commit ./dist -m "I am Build IT!!!" 
         git push --force
 
     - name: LintJS
