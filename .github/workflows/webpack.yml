@@ -22,9 +22,3 @@ jobs:
 
     - name: Build
       run: npm run build --if-present
-
-    - name: LintJS
-      run: npm run lint:js
-
-    - name: LintCSS
-      run: npm run lint:css
