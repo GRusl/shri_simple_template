@@ -8,10 +8,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: "16.x"
-
     steps:
     - name: CheckoutRepository
       uses: actions/checkout@v3
@@ -21,11 +17,10 @@ jobs:
       with:
         node-version: "16.x"
 
-    - name: Install
-      run: npm install --force
-
-    - name: Build
-      run: npm run build
+    - name: InstallAndBuild
+      run: |
+        npm install --force
+        npm run build
 
     - name: LintJS
       run: npm run lint:js
