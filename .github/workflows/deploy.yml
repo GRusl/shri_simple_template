@@ -1,6 +1,11 @@
 name: BuildAndDeploy
 
-on: [pull_request]
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
 
 permissions:
   contents: write
