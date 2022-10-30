@@ -17,12 +17,16 @@ jobs:
       with:
         node-version: "16.x"
 
-    - name: InstallAndBuild
+    - name: Install
+      run: npm install --force
+
+    - name: Build
+      run: npm run build
+
+    - name: Push
       run: |
-        npm install --force
-        npm run build
-      env:
-        GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        git commit /dist -m "I am Build IT!!!"
+        git push --force
 
     - name: LintJS
       run: npm run lint:js
