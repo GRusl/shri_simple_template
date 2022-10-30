@@ -2,9 +2,11 @@ name: Deploy
 
 on:
   pull_request:
-    types:
-      - closed
-      - merged
+    branches:
+      - '*'
+  push:
+    branches:
+      - 'master'
 
 permissions:
   contents: write
