@@ -1,4 +1,4 @@
-name: webpack
+name: BuildWebpack
 
 on: [push, pull_request]
 
