@@ -57,6 +57,12 @@ const config = {
     // @TODO chunk for lodash
     // @TODO chunk for runtime
     // @TODO fallback for crypto
+
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    }
 };
 
 module.exports = config;
